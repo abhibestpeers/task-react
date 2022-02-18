@@ -1,11 +1,51 @@
-import * as React from 'react';
-import { Airport } from '../../Airport/Airport';
+import * as React from "react";
+import { useEffect, useState } from "react";
 
-import * as styles from './Home.scss';
+//file-imports
+import apiClient from "../../../config/axios.config";
+import { Airport } from "../../Airport/Airport";
+import * as styles from "./Home.scss";
 
-export const Home = () => (
-    <div className={styles.airportsList}>
-        <Airport imageSrc="" name="Name" />
-        <Airport imageSrc="" name="Name2" />
+interface AirportItemType {
+  id: number;
+  name: string;
+  code: string;
+  country: string;
+  images: {
+    small: string;
+    big: string;
+    full: string;
+  };
+  averageRating: number;
+}
+
+export const Home = () => {
+
+  const [allPorts, setAllPorts] = useState<AirportItemType[]>([]);
+  const getAll = async () => {
+    return await apiClient
+      .get()
+      .then((response) => {
+        console.log("on reg", response);
+        setAllPorts(response.data);
+        console.log(allPorts);
+      })
+      .catch((err) => {
+        console.error("errors", err);
+      });
+  };
+
+  useEffect(() => {
+    getAll();
+  }, []);
+
+  
+  return (
+    <div className='airportsList'>
+      {allPorts.length === 0 ? "Loading" : (
+        allPorts.map((port) =>(
+          <Airport key={port.id} imageSrc={port.images.small} name={port.name} /> ))
+      )}
     </div>
-)
+  );
+};  
