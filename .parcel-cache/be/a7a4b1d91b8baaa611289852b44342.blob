@@ -1,0 +1,14 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _redux = require('redux');
+var _rootReducer = require("./rootReducer");
+var _rootReducerDefault = _parcelHelpers.interopDefault(_rootReducer);
+// declare global {
+// interface Window {
+// __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+// }
+// }
+const store = _redux.createStore(_rootReducerDefault.default, {
+  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+});
+exports.default = store;

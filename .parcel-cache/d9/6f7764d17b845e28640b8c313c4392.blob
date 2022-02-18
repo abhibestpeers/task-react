@@ -1,0 +1,32 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _SearchScss = require("./Search.scss");
+  var _jsxFileName = "/home/developer/Task_React_1/src/components/Search/Search.tsx";
+  const Search = () => {
+    return (
+      /*#__PURE__*/_react.createElement("div", {
+        className: _SearchScss.searchBox,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7,
+          columnNumber: 5
+        }
+      }, "Search")
+    );
+  };
+  _c = Search;
+  exports.default = Search;
+  var _c;
+  $RefreshReg$(_c, "Search");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

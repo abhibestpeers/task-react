@@ -1,0 +1,14 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "App", function () {
+  return App;
+});
+var _routes = require('../../routes');
+var _routesDefault = _parcelHelpers.interopDefault(_routes);
+require('./App.scss');
+const App = () => ({
+  routes: _routesDefault.default
+});
+_c = App;
+var _c;
+$RefreshReg$(_c, "App");

@@ -1,0 +1,20 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "airportReducer", function () {
+  return airportReducer;
+});
+var _typeAirportTypes = require("../type/airportTypes");
+const initialState = {
+  allAirports: []
+};
+const airportReducer = (state = initialState, props) => {
+  switch (props.type) {
+    case _typeAirportTypes.SET_AIRPORTS:
+      return {
+        ...state,
+        allAirports: payload
+      };
+    default:
+      return state;
+  }
+};

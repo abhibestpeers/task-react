@@ -41,11 +41,11 @@ export const Home = () => {
 
   
   return (
-    <div className='airportsList'>
+    <div className={styles.airportsList}>
       {allPorts.length === 0 ? "Loading" : (
         allPorts.map((port) =>(
           <Airport key={port.id} imageSrc={port.images.small} name={port.name} /> ))
       )}
     </div>
   );
-};  
+};

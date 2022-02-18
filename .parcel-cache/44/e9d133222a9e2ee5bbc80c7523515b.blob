@@ -1,0 +1,9 @@
+.searchBox {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #000000;
+  border: 10px solid orange;
+}

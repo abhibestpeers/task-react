@@ -1,0 +1,54 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "App", function () {
+    return App;
+  });
+  var _react = require('react');
+  var _reactRouterDom = require("react-router-dom");
+  var _pagesHome = require('../pages/home');
+  require('./App.scss');
+  var _jsxFileName = "/home/developer/Task_React_1/src/components/app/App.tsx";
+  const App = () => /*#__PURE__*/_react.createElement(_reactRouterDom.BrowserRouter, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 3
+    }
+  }, /*#__PURE__*/_react.createElement(_reactRouterDom.Routes, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/_react.createElement(_reactRouterDom.Route, {
+    index: true,
+    element: /*#__PURE__*/_react.createElement(_pagesHome.Home, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 32
+      }
+    }),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 10
+    }
+  })));
+  _c = App;
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

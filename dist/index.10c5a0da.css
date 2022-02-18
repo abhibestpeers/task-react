@@ -1,0 +1,60 @@
+.listContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.airport {
+  background: #fff;
+  padding: 20px;
+  margin: 0 5px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 60px;
+}
+.airportsList {
+  background: #ddd;
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.airport {
+  background: #fff;
+  padding: 20px;
+  width: calc(33.3% - 30px);
+  margin: 0 5px;
+  display: flex;
+  height: min-content;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.airportsList {
+  background: #ddd;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+body {
+  margin: 10px;
+}
+.searchBox {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid orange;
+}
+/*# sourceMappingURL=index.10c5a0da.css.map */

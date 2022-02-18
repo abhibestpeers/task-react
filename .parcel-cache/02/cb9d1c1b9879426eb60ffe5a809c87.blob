@@ -1,0 +1,68 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "Home", function () {
+    return Home;
+  });
+  var _react = require('react');
+  var _AirportAirport = require('../../Airport/Airport');
+  var _HomeScss = require('./Home.scss');
+  var _jsxFileName = "/home/developer/Task_React_1/src/components/pages/home/Home.tsx", _s = $RefreshSig$();
+  const Home = () => {
+    _s();
+    const getAll = async () => {
+      debugger;
+      return await fetch('https://centra-flights-api.herokuapp.com/').then(response => {
+        console.log("on reg", response);
+        debugger;
+      }).catch(err => {
+        console.error("errors", err);
+        debugger;
+      });
+    };
+    _react.useEffect(() => {
+      getAll();
+    }, []);
+    return (
+      /*#__PURE__*/_react.createElement("div", {
+        className: _HomeScss.airportsList,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 3
+        }
+      }, /*#__PURE__*/_react.createElement(_AirportAirport.Airport, {
+        imageSrc: "",
+        name: "Name",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_react.createElement(_AirportAirport.Airport, {
+        imageSrc: "",
+        name: "Name2",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 9
+        }
+      }))
+    );
+  };
+  _s(Home, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+  _c = Home;
+  var _c;
+  $RefreshReg$(_c, "Home");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

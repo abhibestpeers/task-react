@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+.airport {
+  background: #fff;
+  padding: 20px;
+  width: calc(33.3% - 30px);
+  margin: 0 5px;
+  display: flex;
+  height: min-content;
+}
+
+.image {
+  width: 60px;
+}
+.airportsList {
+  background: #ddd;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+.airportsList {
+  background: #ddd;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+/*# sourceMappingURL=index.f56e50ce.css.map */

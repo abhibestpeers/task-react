@@ -1,0 +1,8 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _redux = require('redux');
+var _reducers = require('./reducers');
+const rootReducer = _redux.combineReducers({
+  airportReducer: _reducers.airportReducer
+});
+exports.default = rootReducer;

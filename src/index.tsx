@@ -1,11 +1,14 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom';
-
-import { App } from './components/app';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { App } from "./components/app";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root'),
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
 );
 
 if (module.hot !== undefined) {

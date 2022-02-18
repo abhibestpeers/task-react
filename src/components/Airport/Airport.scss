@@ -2,8 +2,8 @@
     width: 100%;
     height:auto;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     flex-wrap: wrap;
     box-sizing:border-box;
     overflow-x: auto;
@@ -15,7 +15,8 @@
     // width: calc(33.3% - 30px);
     margin: 0 5px;
     display: flex;
-    height: min-content;
+    // height: min-content;
+    width: auto;
     align-items: center;
     justify-content: center;
     box-sizing:border-box;

@@ -1,0 +1,18 @@
+.listContainer {
+  flex-wrap: wrap;
+}
+
+.airport {
+  background: #fff;
+  padding: 20px;
+  width: calc(33.3% - 30px);
+  margin: 0 5px;
+  display: flex;
+  height: min-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 60px;
+}

@@ -1,0 +1,55 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _reactRouterDom = require("react-router-dom");
+var _componentsPagesHome = require('../components/pages/home');
+var _componentsPagesAbout = require('../components/pages/about');
+var _jsxFileName = "/home/developer/Task_React_1/src/routes/index.js";
+// import { About } from '../pages/about';
+const routes = /*#__PURE__*/React.createElement(_reactRouterDom.BrowserRouter, {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 3
+  }
+}, /*#__PURE__*/React.createElement(_reactRouterDom.Routes, {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9,
+    columnNumber: 5
+  }
+}, /*#__PURE__*/React.createElement(_reactRouterDom.Route, {
+  index: true,
+  element: /*#__PURE__*/React.createElement(_componentsPagesHome.Home, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 27
+    }
+  }),
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10,
+    columnNumber: 5
+  }
+}), /*#__PURE__*/React.createElement(_reactRouterDom.Route, {
+  path: "about",
+  element: /*#__PURE__*/React.createElement(_componentsPagesAbout.About, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 39
+    }
+  }),
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11,
+    columnNumber: 10
+  }
+})));
+exports.default = routes;

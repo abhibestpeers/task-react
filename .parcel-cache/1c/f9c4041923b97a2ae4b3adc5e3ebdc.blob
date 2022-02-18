@@ -1,0 +1,4 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _airportReducer = require('./airportReducer');
+_parcelHelpers.exportAll(_airportReducer, exports);

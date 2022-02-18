@@ -1,0 +1,11 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _axios = require('axios');
+var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+const apiClient = _axiosDefault.default.create({
+  baseURL: 'https://centra-flights-api.herokuapp.com/',
+  headers: {
+    "Authorization": `Bearer PprxhenEbxzmL7YrOuRZ0EqSwpCzcqU2`
+  }
+});
+exports.default = apiClient;
