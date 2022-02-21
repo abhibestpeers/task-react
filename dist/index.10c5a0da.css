@@ -165,6 +165,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px;
+  height: 100%;
 }
 .searchPage .d-flex {
   display: flex;
@@ -195,10 +196,31 @@ body {
   background: aliceblue;
   border-radius: 12px;
   padding: 15px;
+  margin-top: 60px;
+}
+.searchPage .card .w-75 {
+  width: 75%;
 }
 .searchPage .card h3 {
   margin: 0px;
   text-transform: uppercase;
+}
+.searchPage .card .boredr-doted {
+  border: 1px solid #dc3545;
+  width: 100%;
+  border-style: dashed;
+  margin: 0 6px;
+  position: relative;
+}
+.searchPage .card .boredr-doted::before {
+  position: absolute;
+  top: -4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #dc3545;
+  content: "";
+  left: -12px;
 }
 .searchPage .card .right-text p {
   margin: 0;

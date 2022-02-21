@@ -3,7 +3,7 @@ import * as React from "react";
 import "./Airport.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { faStarSharp } from '@fortawesome/free-solid-svg-icons';
+// import { faStarSharp } from '@fortawesome/free-solid-svg-icons';
 
 
 interface Props {

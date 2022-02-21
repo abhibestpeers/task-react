@@ -1,13 +1,45 @@
-import * as React from 'react';
+import * as  React from 'react';
+import { FormEvent, FC, useState } from 'react';
+import { useDispatch } from 'react-redux'
+
+import { setAlert } from '../../redux/actions/alertAction'
+import { setLoading, getAllAirports } from '../../redux/actions/airportActions'
+
 import "./Search.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-const Search = () => {
+interface SearchProps {
+  title: string;
+}
+
+const Search: FC<SearchProps> = ({title}) => {
+  
+  const dispatch = useDispatch();
+  const [port, setPort] = useState("");
+
+
+  const changeHandler = (e: FormEvent<HTMLInputElement>) => {
+      setPort(e.currentTarget.value)
+  }
+
+  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if(port.trim() === ''){
+      return dispatch(setAlert("Port name is required"))
+    }
+
+    dispatch(setLoading());
+    dispatch(getAllAirports());
+    setPort("");
+  }
+
+
   return (
     <div className="searchBox">
-      <form className="form-field">
+      <form className="form-field" onSubmit={submitHandler}>
       <div className="form-group">
         <label>From</label>
         <select className="form-control" id="exampleFormControlSelect1">
