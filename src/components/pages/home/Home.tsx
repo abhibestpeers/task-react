@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 //file-imports
 import apiClient from "../../../config/axios.config";
 import { Airport } from "../../Airport/Airport";
-import * as styles from "./Home.scss";
+import  "./Home.scss";
 
 interface AirportItemType {
   id: number;
@@ -41,7 +41,7 @@ export const Home = () => {
 
   
   return (
-    <div className={styles.airportsList}>
+    <div className="airportsList">
       {allPorts.length === 0 ? "Loading" : (
         allPorts.map((port) =>(
           <Airport key={port.id} imageSrc={port.images.small} name={port.name} /> ))

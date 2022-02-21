@@ -15,3 +15,4 @@ export const Airport = ({ imageSrc, name }: Props) => (
     </div>
   </div>
 );
+  

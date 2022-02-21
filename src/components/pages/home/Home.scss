@@ -1,23 +1,13 @@
 .airportsList {
-    background: #ddd;
-    // height: 100vh;
+   background-color: #fff;
     display: flex;
     width: 100vw;
-    // justify-content: center;
-    // align-items: flex-start;
+    height: 100vh;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    overflow: visible;
+    margin-top: 10px;
 }
 
-.airport {
-  background: #fff;
-  padding: 20px;
-  width: calc(33.3% - 30px);
-  margin: 0 5px;
-  display: flex;
-  height: min-content;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
