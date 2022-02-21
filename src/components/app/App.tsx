@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter,  Routes,  Route } from "react-router-dom";
 import { Home } from '../pages/home';
-import { About } from '../pages/about';
+import { SearchPage } from '../pages/searchPage';
 
 import './App.scss';
 import Search from '../Search/Search';
@@ -11,7 +11,7 @@ export const App = () => (
   <Search/>
     <Routes>     
          <Route index element={<Home />} />
-         <Route path="about" element={<About />} />
+         <Route path="searchPage" element={<SearchPage />} />
     </Routes>
   </BrowserRouter>
 );

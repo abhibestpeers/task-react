@@ -1,0 +1,51 @@
+.airportsList {
+  background: #ddd;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+
+.searchPage {
+  background: url(https://images3.alphacoders.com/737/thumb-1920-737916.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+.searchPage .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchPage .airportPlace {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 50px auto 0;
+  text-align: center;
+  color: #fff;
+}
+.searchPage .airportPlace h2 {
+  text-transform: uppercase;
+}
+.searchPage .card {
+  background: aliceblue;
+  border-radius: 12px;
+  padding: 15px;
+}
+.searchPage .card h3 {
+  margin: 0px;
+  text-transform: uppercase;
+}
+.searchPage .card .right-text p {
+  margin: 0;
+  border-right: 1px solid #ccc;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.searchPage .btn-success {
+  background-color: #dc3545;
+  border: 0px solid #dc3545;
+  border-radius: 10px;
+  padding: 12px;
+  color: #fff;
+}

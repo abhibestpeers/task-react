@@ -1,0 +1,27 @@
+.listContainer {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-x: auto;
+  border: 2px solid red;
+  margin-top: 20px;
+}
+
+.airport {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+}
+
+p {
+  position: relative;
+  bottom: 0;
+  right: 50%;
+}

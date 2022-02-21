@@ -1,0 +1,7 @@
+.airportsList {
+  background: #ddd;
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  gap: 20px;
+}

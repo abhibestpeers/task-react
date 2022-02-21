@@ -1,0 +1,11 @@
+.searchBox .form-field {
+  display: flex;
+  width: 50%;
+  border: 1px solid red;
+  padding: 8px 15px;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+.searchBox .form-field label {
+  display: block;
+}

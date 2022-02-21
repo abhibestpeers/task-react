@@ -1,0 +1,26 @@
+.searchBox .form-field {
+  display: flex;
+  width: 50%;
+  border: 1px solid red;
+  padding: 8px 15px;
+  border-radius: 12px;
+  justify-content: space-between;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  margin: 0px auto;
+}
+.searchBox .form-field .form-group {
+  width: 43%;
+  border-right: 1px solid #ccc;
+  padding-right: 15px;
+}
+.searchBox .form-field .form-group label {
+  display: block;
+}
+.searchBox .form-field .form-group select {
+  width: 100%;
+  border: 0;
+  background-color: #fff;
+}
+.searchBox .form-field .form-group select:focus {
+  outline: 0;
+}

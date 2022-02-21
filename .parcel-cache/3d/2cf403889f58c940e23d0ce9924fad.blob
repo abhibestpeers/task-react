@@ -1,0 +1,137 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRedux = require('react-redux');
+  require("./Search.scss");
+  var _reactWidgetsCombobox = require("react-widgets/Combobox");
+  var _reactWidgetsComboboxDefault = _parcelHelpers.interopDefault(_reactWidgetsCombobox);
+  var _jsxFileName = "/home/developer/Task_React_1/src/components/Search/Search.tsx", _s = $RefreshSig$();
+  const Search = () => {
+    _s();
+    const allAirports = _reactRedux.useSelector(state => state?.airportReducer?.allAirports);
+    const [tempCompany, setTempCompany] = _react.useState();
+    const getCompaniesOptions = companies => {
+      const options = [];
+      companies.map((item, i) => {
+        options.push({
+          company: item.name,
+          value: i
+        });
+      });
+      return options;
+    };
+    const techCompanies = [{
+      img: "7.png",
+      name: "facebook"
+    }, {
+      img: "4.png",
+      name: "amazon"
+    }, {
+      img: "14.png",
+      name: "netflix"
+    }];
+    const handleSearch = () => {};
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "row mx-0  p-4 d-flex justify-content-center",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col-4",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 11
+        }
+      }, "From"), /*#__PURE__*/_reactDefault.default.createElement(_reactWidgetsComboboxDefault.default, {
+        data: getCompaniesOptions(techCompanies),
+        dataKey: "value",
+        textField: "company",
+        placeholder: "Select Problem Name",
+        /*value={tempCompany}*/
+        onChange: value => setTempCompany(value),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 11
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col-4",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 11
+        }
+      }, "To"), /*#__PURE__*/_reactDefault.default.createElement(_reactWidgetsComboboxDefault.default, {
+        data: getCompaniesOptions(techCompanies),
+        dataKey: "value",
+        textField: "company",
+        placeholder: "Select Problem Name",
+        /*value={tempCompany}*/
+        onChange: value => setTempCompany(value),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54,
+          columnNumber: 11
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col-2 d-flex align-items-center",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        type: "button",
+        className: "btn btn-priamary",
+        onClick: () => handleSearch(),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64,
+          columnNumber: 11
+        }
+      }, "Search"))))
+    );
+  };
+  _s(Search, "EIgEEQUsK5sucAhasLWG7kMtkjE=", false, function () {
+    return [_reactRedux.useSelector];
+  });
+  _c = Search;
+  exports.default = Search;
+  var _c;
+  $RefreshReg$(_c, "Search");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

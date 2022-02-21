@@ -1,0 +1,31 @@
+.airportsList {
+  background: #ddd;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+
+.searchPage .d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.searchPage .airportPlace {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 50px auto 0;
+  text-align: center;
+}
+.searchPage .airportPlace h2, .searchPage .airportPlace h3 {
+  text-transform: uppercase;
+}
+.searchPage .card .right-text span {
+  border-right: 1px solid #ccc;
+}
+.searchPage .btn-success {
+  background-color: #dc3545;
+  border: 0px solid #dc3545;
+  border-radius: 10px;
+  padding: 12px;
+  color: #fff;
+}

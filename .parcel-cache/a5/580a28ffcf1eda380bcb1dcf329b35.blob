@@ -1,0 +1,6 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "SET_AIRPORTS", function () {
+  return SET_AIRPORTS;
+});
+const SET_AIRPORTS = "@airport/SET_AIRPORTS";

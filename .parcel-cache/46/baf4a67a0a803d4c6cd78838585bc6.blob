@@ -1,0 +1,30 @@
+.listContainer {
+  width: 30%;
+  height: 40%;
+  display: block;
+  box-sizing: border-box;
+  overflow-x: auto;
+  border: 2px solid red;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.airport {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+}
+
+p {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}

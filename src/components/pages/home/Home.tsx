@@ -44,7 +44,7 @@ export const Home = () => {
     <div className="airportsList">
       {allPorts.length === 0 ? "Loading" : (
         allPorts.map((port) =>(
-          <Airport key={port.id} imageSrc={port.images.small} name={port.name} /> ))
+          <Airport key={port.id} imageSrc={port.images.small} name={port.name} averageRating={port.averageRating} /> ))
       )}
     </div>
   );

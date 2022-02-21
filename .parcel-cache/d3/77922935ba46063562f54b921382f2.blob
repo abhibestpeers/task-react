@@ -1,0 +1,57 @@
+.listContainer {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-x: auto;
+  border: 2px solid red;
+  margin-top: 20px;
+}
+
+.airport {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+}
+
+p {
+  position: relative;
+  bottom: 0;
+  right: 50%;
+}
+.airportsList {
+  background: #ddd;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 2px solid green;
+  margin-top: 10px;
+}
+.airportsList {
+  background: #ddd;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+}
+body {
+  margin: 10px;
+}
+.searchBox {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid orange;
+}
+/*# sourceMappingURL=index.HASH_REF_6763370b467adea2ccd9bcdd10c5a0da.css.map */

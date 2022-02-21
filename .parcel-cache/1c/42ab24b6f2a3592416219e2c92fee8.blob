@@ -1,0 +1,30 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  _parcelHelpers.export(exports, "SearchPage", function () {
+    return SearchPage;
+  });
+  var _react = require('react');
+  require('./SearchPage.scss');
+  var _jsxFileName = "/home/developer/Task_React_1/src/components/pages/searchPage/SearchPage.tsx";
+  const SearchPage = () => /*#__PURE__*/_react.createElement("div", {
+    className: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 5
+    }
+  });
+  _c = SearchPage;
+  var _c;
+  $RefreshReg$(_c, "SearchPage");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,6 @@
+.searchBox .form-field {
+  display: flex;
+}
+.searchBox .form-field label {
+  display: block;
+}

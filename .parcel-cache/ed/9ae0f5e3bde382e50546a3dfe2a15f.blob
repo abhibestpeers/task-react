@@ -1,0 +1,14 @@
+.airport {
+  background: #fff;
+  padding: 20px;
+  margin: 0 5px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 60px;
+}

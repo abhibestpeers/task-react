@@ -1,0 +1,11 @@
+.airportsList {
+  background-color: #fff;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: visible;
+  margin-top: 10px;
+}

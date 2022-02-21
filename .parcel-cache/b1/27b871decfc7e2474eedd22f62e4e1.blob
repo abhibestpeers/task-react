@@ -1,0 +1,51 @@
+.listContainer {
+  width: 30%;
+  height: 70%;
+  display: block;
+  box-sizing: border-box;
+  overflow-x: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}
+
+.airport {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.airport .description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.airport .description .text-des {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.airport .description .text-des div {
+  text-align: left;
+}
+.airport .description .text-des div h4 {
+  margin-bottom: 5px;
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+}
+.airport .description .text-des div .hover-text {
+  margin-top: 10px;
+  opacity: 0;
+}
+.airport .description .text-des div .hover-text p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
