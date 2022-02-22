@@ -3,6 +3,7 @@ import * as React from "react";
 import "./Airport.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import Rating from "../Rating/Rating";
 // import { faStarSharp } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -18,17 +19,17 @@ export const Airport = ({ imageSrc, name, averageRating }: Props) => (
             <figcaption>
               <div>
                   <div className="description">
-                      <div className="">
+                      <div className="">  
                         <h4>{name}</h4>
                         <span>Sédar Senghor In.</span>
                       </div>
                     <div>
+                    <FontAwesomeIcon icon={faMagnifyingGlass}/> 
+                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                      <FontAwesomeIcon icon={faStarSharp}/>
+                    <FontAwesomeIcon icon={faMagnifyingGlass}/> 
+                      {/* <Rating averageRating={averageRating}/> */}
                     </div>
                   </div>
                 <div className="hover-text">

@@ -4,11 +4,9 @@ import { Home } from '../pages/home';
 import { SearchPage } from '../pages/searchPage';
 
 import './App.scss';
-import Search from '../Search/Search';
 
 export const App = () => ( 
   <BrowserRouter>
-  <Search/>
     <Routes>     
          <Route index element={<Home />} />
          <Route path="searchPage" element={<SearchPage />} />

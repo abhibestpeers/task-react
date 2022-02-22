@@ -11,10 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 interface SearchProps {
-  title: string;
+  title: string
 }
 
-const Search: FC<SearchProps> = ({title}) => {
+const Search: FC<SearchProps> = ({title} : SearchProps) => {
   
   const dispatch = useDispatch();
   const [port, setPort] = useState("");

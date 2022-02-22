@@ -2,10 +2,9 @@ body{
   margin: 0;
 }
 .airportsList {
-    background: #ddd;
     height: 100vh;
     display: flex;
-    gap: 20px;
+    padding: 0 50px !important;
 }
 .searchPage{
   background:url(https://images3.alphacoders.com/737/thumb-1920-737916.jpg);
@@ -13,10 +12,16 @@ body{
   background-size: cover;
   padding:50px;
   height:100%;
+  .backBtn{
+    text-decoration: none;
+    color: #fff;
+    span{
+      margin-right:8px;
+    }
+  }
   .d-flex{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     .left-text,.right-text{
       -ms-flex: 1 1 auto!important;
     flex: 1 1 auto!important;             
@@ -26,47 +31,63 @@ body{
     display: flex;
     justify-content: end;
     align-items: center;
+    @media(max-width:414px){
+      justify-content:start;
+      margin-top: 15px;
+    }
   }
   .airportPlace{
     display: flex;
     justify-content: space-between;
     width: 60%;
-    margin: 50px auto 0;
+    margin: 50px auto 70px;
     text-align: center;
     color:#fff;
+    @media(max-width:768px){
+      width: 100%;
+    }
     h2{
       text-transform: uppercase;
     }
   }
   .card{
-    background: aliceblue;
+    background: #fff;
     border-radius: 12px;
     padding: 15px;
-    margin-top: 60px;
+    margin-bottom: 30px;
     .w-75{
       width:75%;
+      position: relative;
+      z-index: 99;
+      margin: 10px 15px 0;
+      &::after{
+        border: 1px solid #dc3545;
+        width: 98%;
+        border-style: dashed;
+        margin: 0 6px;
+        position: absolute;
+        content:'';
+        top: 4px;
+        left: 0;
+        z-index: -1;
+      }
+      .circle{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #dc3545;
+        display: block;
+        background: #fff;
+      } 
+      small{
+        margin-left: -8px;
+      }
     }
     h3{
       margin: 0px;
       text-transform: uppercase;
     }
-    .boredr-doted{
-    border: 1px solid #dc3545;
-    width: 100%;
-    border-style: dashed;
-    margin: 0 6px;
-    position: relative;
-      &::before{
-        position: absolute;
-        top: -4px;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        border: 1px solid #dc3545;
-        content: "";
-        left: -12px;
-      }
-    }
+
     .right-text{
       p{
         margin: 0;
@@ -75,7 +96,10 @@ body{
         margin-right: 15px;
       }
     }
-
+    .left-text{
+      align-items: center;
+      display:flex;
+    }
   }
   .btn-success{
     background-color: #dc3545;
@@ -83,5 +107,13 @@ body{
   border-radius: 10px;
   padding:12px;
   color: #fff;
+  }
+}
+@media(max-width:414px){
+  .searchPage{
+    .card-body{
+      display: block !important;
+      justify-content:start;
+    }
   }
 }

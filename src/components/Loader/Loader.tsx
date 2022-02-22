@@ -4,7 +4,6 @@ import { Circles } from "react-loader-spinner";
 
 import "./Loader.scss"
 
-// export const Home: FC<PortData[]> = ()
 export const Loader: FC = () => {
   return (
     <div className="loader">
