@@ -50,6 +50,7 @@ export const getConnection = (
   };
 };
 
+
 export const setLoading = (): PortAction => {
   return {
     type: ActionTypes.SET_LOADING,

@@ -23,13 +23,8 @@ export const Airport = ({ imageSrc, name, averageRating }: Props) => (
                         <h4>{name}</h4>
                         <span>Sédar Senghor In.</span>
                       </div>
-                    <div>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/> 
-                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass}/> 
-                      {/* <Rating averageRating={averageRating}/> */}
+                    <div>                  
+                      <Rating averageRating={averageRating}/>
                     </div>
                   </div>
                 <div className="hover-text">

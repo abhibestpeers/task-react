@@ -20,6 +20,7 @@
     "noUnusedParameters": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "noImplicitAny":false,
   },
   "include": [
     "src", "index.d.ts"

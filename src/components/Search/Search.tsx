@@ -15,21 +15,23 @@ interface IPort {
 
 const Search: FC<PortData> = () => {
   const allPorts = useSelector((state: RootState) => state.ports.data);
-  const [portOne, setPortOne] = useState<IPort>({ port: "" });
-  const [portTwo, setPortTwo] = useState<IPort>({ port: "" });
+  const [from, setFrom] = useState<IPort>({ port: "" });
+  const [to, setTo] = useState<IPort>({ port: "" });
   const navigate = useNavigate();
+
+  console.log(allPorts);
 
   const getPortOptions = (port: IPort) => {
     const options: any[] = [];
-    allPorts?.map((item: any) => {
-      options.push({ port: item.name, id: item.id });
+    allPorts?.map((item: PortData) => {
+      options.push({ port: item.name, id: item.id, code: item.code, images: item.images, country:item.country });
     });
     return options;
   };
 
-  const handleSearch = (portOne, portTwo) => {
-    navigate('/searchPage', { state: { portOne, portTwo } });
-    console.log(portOne, portTwo);
+  const handleSearch = (from, to) => {
+    navigate('/searchPage', { state: { from, to } });
+    // console.log(portOne, portTwo);
   }
 
   return (
@@ -39,27 +41,27 @@ const Search: FC<PortData> = () => {
           <label>From</label>
           <Combobox
             className="form-control"
-            data={getPortOptions(portOne)}
+            data={getPortOptions(from)}
             dataKey={"value"}
             textField="port"
             placeholder={"Select Port Name"}
             // value={portOne}
-            onChange={(value) => setPortOne(value)}
+            onChange={(value) => setFrom(value)}
           />
         </div>
         <div className="form-group">
           <label>To</label>
           <Combobox
             className="form-control"
-            data={getPortOptions(portTwo)}
+            data={getPortOptions(to)}
             dataKey={"value"}
             textField="port"
             placeholder={"Select Port Name"}
             // value={portTwo}
-            onChange={(value) => setPortTwo(value)}
+            onChange={(value) => setTo(value)}
           />
         </div>
-        <button type="submit" className="btn btn-success" onClick={()=>handleSearch(portOne, portTwo)}>
+        <button type="submit" className="btn btn-success" onClick={()=>handleSearch(from, to)}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
       </form>
