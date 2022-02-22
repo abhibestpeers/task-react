@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {FC} from 'react'
 import {useLocation} from 'react-router-dom'
+import apiClient from '../../../config/axios.config'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLeftLong } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,6 +11,35 @@ export const SearchPage: FC = () => {
 
   const {state} = useLocation();
   console.log(state);
+
+  const getAll = async () => {
+    return await apiClient.get('/connections')
+      .then((response) => {
+        console.log("on reg", response);
+        const d = response.data.split('\n')
+        debugger
+        const obj = {}
+        d.map((item) => {
+          let splitedItem = item.split(":")
+          obj[splitedItem[0]] = splitedItem[1].replaceAll(" ", '').split(',')
+        })
+        funt("1960","1452", obj)
+        console.log("rfrfr", obj);
+      })
+      .catch((err) => {
+        console.error("errors", err);
+      });
+  };
+
+  const funt = (from, to, obj) => {
+    if (obj[from].includes(to)) {
+      return console.log("direct-connection")
+    } else {
+      return console.log("indirect-connection")
+    }
+  }
+
+
 
   return(
     <div className='searchPage'>
