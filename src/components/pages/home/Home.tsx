@@ -3,13 +3,13 @@ import { FC, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
 //file-imports
+import { Loader } from '../../Loader/Loader'
 import { RootState } from "../../../redux/store";
 import { setAlert } from '../../../redux/actions/alertAction'
 import { setLoading, getAllAirports } from '../../../redux/actions/airportActions'
+import { PortData } from "../../../redux/types/types";
 import { Airport } from "../../Airport/Airport";
 import  "./Home.scss";
-import { PortData } from "../../../redux/types/types";
-
 // interface HomeProps {
 //   id: number;
 //   name: string;
@@ -39,11 +39,15 @@ export const Home: FC<PortData[]> = () => {
     dispatch(getAllAirports()); 
     setAllPorts(portData);
   }, []);
+ 
+
+
+
 
   return (
     <div className="airportsList">
       {error ? <p>{error}</p> : "" }
-      {loading ? "Loading" : (
+      {loading ? <Loader/> : (
         allPorts?.map((port) =>(
           <Airport key={port.id} imageSrc={port.images.small} name={port.name} averageRating={port.averageRating} /> ))
       )}
