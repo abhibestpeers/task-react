@@ -5,11 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 //file-imports
 import { Loader } from "../../Loader/Loader";
 import { RootState } from "../../../redux/store";
-// import { setAlert } from "../../../redux/actions/alertAction";
-import {
-  setLoading,
-  getAllAirports,
-} from "../../../redux/actions/airportActions";
+import {  setLoading,  getAllAirports } from "../../../redux/actions/airportActions";
 import { PortData } from "../../../redux/types/types";
 import { Airport } from "../../Airport/Airport";
 import "./Home.scss";

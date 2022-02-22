@@ -1,12 +1,17 @@
 import * as React from 'react';
-import { Airport } from '../../Airport/Airport';
-// import * as img from '../../../assets/airplane.png'
+import {FC} from 'react'
+import {useLocation} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLeftLong } from '@fortawesome/free-solid-svg-icons';
 
 import  './SearchPage.scss';
 
-export const SearchPage = () => (
+export const SearchPage: FC = () => {
+
+  const {state} = useLocation();
+  console.log(state);
+
+  return(
     <div className='searchPage'>
       <a href="#" className='backBtn'><span><FontAwesomeIcon icon={faLeftLong}/></span> Back</a>
         <div className="airportPlace">
@@ -75,4 +80,4 @@ export const SearchPage = () => (
           </div>
         </div>
     </div>
-)
+  )}
