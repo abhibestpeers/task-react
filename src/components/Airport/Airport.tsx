@@ -11,17 +11,18 @@ interface Props {
   imageSrc: string;
   name: string;
   averageRating: number;
+  country: string;
 }
 
-export const Airport = ({ imageSrc, name, averageRating }: Props) => (
+export const Airport = ({ imageSrc, name, averageRating, country }: Props) => (
   <figure className="listContainer effect-lily">
             <img className="image" src={imageSrc} />
             <figcaption>
               <div>
                   <div className="description">
                       <div className="">  
-                        <h4>{name}</h4>
-                        <span>Sédar Senghor In.</span>
+                        <h4>{country}</h4>
+                        <span>{name}</span>
                       </div>
                     <div>                  
                       <Rating averageRating={averageRating}/>

@@ -38,6 +38,7 @@ export const Home: FC<PortData[]> = () => {
               imageSrc={port.images.small}
               name={port.name}
               averageRating={port.averageRating}
+              country ={port.country}
             />
           ))
         )}

@@ -3,20 +3,16 @@ import { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 interface Rating {
-  rating: number;
+  averageRating: number;
 }
 
 const Rating = (rating: Rating) => {
-  const [portRatings, setPortRatings] = useState();
+  const [portRatings, setPortRatings] = useState(rating.averageRating);
 
   const ratingChanged = (rating) => {
     console.log(rating.averageRating);
     setPortRatings(rating.averageRating);
   };
-
-  useEffect(()=>{
-    ratingChanged(rating);
-  },[])
 
   console.log(portRatings)
 
@@ -24,9 +20,8 @@ const Rating = (rating: Rating) => {
     <ReactStars
       value={portRatings}
       size={24}
-      onChange={null}
-      color="#ffd700"
-      // activeColor="#ffd700"
+      onChange={ratingChanged}
+      activeColor="#ffd700"
       isHalf={true}
     />
   );
